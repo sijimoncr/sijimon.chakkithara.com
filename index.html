@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Space Explorer</title>
+    <style>
+        body {
+            background-color: #000033;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        
+        .header {
+            background-color: #000055;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .main-title {
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 5px blue;
+            animation: colorChange 5s infinite;
+        }
+        
+        @keyframes colorChange {
+            0% { color: white; }
+            25% { color: yellow; }
+            50% { color: red; }
+            75% { color: lightgreen; }
+            100% { color: white; }
+        }
+        
+        .center-image {
+            display: block;
+            margin: 0 auto;
+            border: 3px solid white;
+        }
+        
+        .intro-section {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+        }
+        
+        .subtitle {
+            color: yellow;
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive;
+        }
+        
+        .blue-text {
+            color: lightblue;
+            font-size: 18px;
+        }
+        
+        .green-text {
+            color: lightgreen;
+            font-style: italic;
+        }
+        
+        .orange-text {
+            color: orange;
+            font-weight: bold;
+        }
+        
+        .highlight {
+            font-size: 20px;
+            color: red;
+        }
+        
+        .planet-section {
+            background-color: rgba(255, 0, 0, 0.2);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: 2px solid red;
+            transition: transform 0.3s;
+        }
+        
+        .planet-section:hover {
+            transform: scale(1.02);
+        }
+        
+        .planet-title {
+            letter-spacing: 3px;
+        }
+        
+        .planet-list {
+            line-height: 1.6;
+        }
+        
+        .planet-image {
+            vertical-align: middle;
+            transition: transform 0.5s;
+        }
+        
+        .planet-image:hover {
+            transform: rotate(360deg);
+        }
+        
+        .facts-section {
+            background-color: rgba(0, 255, 0, 0.2);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: 2px solid green;
+            transition: background-color 0.3s;
+        }
+        
+        .facts-section:hover {
+            background-color: rgba(0, 255, 0, 0.4);
+        }
+        
+        .facts-title {
+            text-decoration: underline;
+        }
+        
+        .facts-list {
+            font-family: 'Courier New', monospace;
+        }
+        
+        .fact-highlight {
+            background-color: purple;
+            padding: 2px;
+        }
+        
+        .wavy-line {
+            text-decoration: underline wavy;
+        }
+        
+        .yellow-large {
+            font-size: 20px;
+            color: yellow;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        .footer {
+            background-color: rgba(0, 0, 255, 0.2);
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            border: 2px solid blue;
+        }
+        
+        .space-link {
+            color: yellow;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+        
+        .space-link:hover {
+            font-size: 20px;
+            color: orange;
+        }
+        
+        .back-link {
+            color: white;
+            background-color: blue;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .back-link:hover {
+            background-color: #0066ff;
+            transform: translateY(-5px);
+        }
+        
+        .rocket {
+            font-size: 30px;
+            display: inline-block;
+            animation: rocketMove 4s infinite;
+        }
+        
+        @keyframes rocketMove {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        
+        .star {
+            display: inline-block;
+            animation: twinkle 1s infinite;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0.3; }
+            50% { opacity: 1; }
+            100% { opacity: 0.3; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="main-title">Space Explorer</h1>
+        
+        <img src="/api/placeholder/300/200" alt="Space scene" class="center-image">
+        
+        <p style="text-align: center;">
+            <span class="rocket">🚀</span>
+            <span class="star">⭐</span>
+            <span class="star">⭐</span>
+            <span class="star">⭐</span>
+        </p>
+    </div>
+    
+    <div class="intro-section">
+        <h2 class="subtitle">My Awesome Space Website</h2>
+        
+        <p class="blue-text">Hello! This is my <b>space</b> webpage.</p>
+        
+        <p class="green-text">I am learning about <u>HTML</u>.</p>
+        
+        <p class="orange-text">Space is <span class="highlight">AWESOME</span>! I like <a href="#planets" style="color: hotpink;">planets</a>, stars, and rockets.</p>
+    </div>
+    
+    <div class="planet-section">
+        <h2 id="planets" class="planet-title">My Favorite Planets</h2>
+        <ul class="planet-list">
+            <li><span style="font-weight: bold; color: lightblue;">Earth</span> - Our home planet <img src="/api/placeholder/50/50" alt="Earth" class="planet-image"></li>
+            <li><span style="font-weight: bold; color: red;">Mars</span> - The Red Planet <img src="/api/placeholder/50/50" alt="Mars" class="planet-image"></li>
+            <li><span style="font-weight: bold; color: gold;">Saturn</span> - The planet with rings <img src="/api/placeholder/50/50" alt="Saturn" class="planet-image"></li>
+            <li><span style="font-weight: bold; color: orange;">Jupiter</span> - The biggest planet <img src="/api/placeholder/50/50" alt="Jupiter" class="planet-image"></li>
+        </ul>
+    </div>
+    
+    <div class="facts-section">
+        <h2 class="facts-title">Top 3 Space Facts</h2>
+        <ol class="facts-list">
+            <li>One day on Venus is <span class="fact-highlight">longer than one year</span> on Venus.</li>
+            <li>The footprints on the moon will stay there for <span class="wavy-line">millions of years</span>.</li>
+            <li>The Sun is so big that about <span class="yellow-large">1 million</span> Earths could fit inside it!</li>
+        </ol>
+    </div>
+    
+    <div class="footer">
+        <p>
+            <a href="https://spaceplace.nasa.gov/" target="_blank" class="space-link">Visit NASA Space Place</a>
+        </p>
+        
+        <p>
+            <a href="#" class="back-link">Back to Top</a>
+        </p>
+    </div>
+</body>
+</html>
